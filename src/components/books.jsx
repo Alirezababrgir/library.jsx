@@ -15,13 +15,13 @@ const Books = () => {
                 </div>
                 <div className="col">
                     {mydata.map((data) => (
-                        <Link to={`/books/${data.number}`} key={data.number} style={{display:"block"}}>
+                        <Link to={`/books/${data.number}`} key={data.number} style={{ display: "block" }}>
                             {data.name}
                         </Link>
                     ))}
                 </div>
             </div>
-            <Outlet/>
+            <Outlet />
         </div>
     )
 }

@@ -22,9 +22,14 @@ root.render(
                   کتاب مورد نظر خود را انتخواب کنید ....
                 </p>
               </main>
-            }/>
-          <Route path=':BookID' element={<Showbook/>} />
+            } />
+            <Route path=':BookID' element={<Showbook />} />
           </Route>
+          <Route path='*' element={
+            <div>
+              <h4>مسیر یافت نشد !</h4>
+            </div>
+          } />
         </Route>
       </Routes>
     </BrowserRouter>

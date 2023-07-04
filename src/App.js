@@ -10,7 +10,7 @@ function App() {
         <Link to="/books" style={{textDecoration:"none"}} className='nav-link active'>لیست کتابها</Link>
         </li>
         <li class="nav-item">
-        <Link to="/books" style={{textDecoration:"none"}} className='nav-link active'>تماس با ما</Link>
+        <Link to="/about" style={{textDecoration:"none"}} className='nav-link active'>تماس با ما</Link>
         </li>
       </ul>
       <Outlet/>
