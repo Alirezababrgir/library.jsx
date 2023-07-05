@@ -10,3 +10,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+input::-moz-placeholder{
+  color: rgb(112, 111, 111) !important;
+}
