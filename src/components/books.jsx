@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
+import { NavLink,Outlet} from "react-router-dom";
 import { Data } from "../data/data";
-import { Outlet } from "react-router-dom";
 const Books = () => {
     const mydata = Data();
     return (
@@ -9,15 +8,21 @@ const Books = () => {
                 <div className="col">
                     <form className="d-flex" role="search">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
+                        <button className="btn btn-outline-success" type="submit">جستجو</button>
                     </form>
 
                 </div>
                 <div className="col">
                     {mydata.map((data) => (
-                        <Link to={`/books/${data.number}`} key={data.number} style={{ display: "block" }}>
+                        <NavLink to={`/books/${data.number}`} key={data.number}style={({isActive})=>{
+                            return{
+                                textDecoration:"none",
+                                display:"block",
+                                color:isActive?"red":""
+                            }
+                        }}>
                             {data.name}
-                        </Link>
+                        </NavLink>
                     ))}
                 </div>
             </div>

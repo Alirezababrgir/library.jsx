@@ -3,7 +3,6 @@ import { bid } from "../data/data";
 const Showbook=()=>{
     const params=useParams();
     const B=bid(parseInt(params.BookID))
-    console.log(params);
 return(
 <div class="card">
     <h5>نام کتاب:{B.name}</h5>
